@@ -1,1 +1,38 @@
-"hii deepti"
+sqlite> CREATE TABLE Seniordbs(srid TEXT NOT NULL PRIMARY KEY,Name Text,email TEXT,Password TEXT);
+sqlite> CREATE TABLE Juniordbs(jrid TEXT NOT NULL PRIMARY KEY,Name Text,email TEXT,Password TEXT);
+sqlite> .tables
+Juniordbs  Seniordbs
+sqlite> SELECT *from Seniordbs
+   ...> /
+sqlite> pragma table_info('Seniordbs');
+0|srid|TEXT|1||1
+1|Name|TEXT|0||0
+2|email|TEXT|0||0
+3|Password|TEXT|0||0
+sqlite> pragma table_info('Juniordbs');
+0|jrid|TEXT|1||1
+1|Name|TEXT|0||0
+2|email|TEXT|0||0
+3|Password|TEXT|0||0
+sqlite> ALTER TABLE Seniordbs ADD Year INT;
+sqlite> pragma table_info('Seniordbs');
+0|srid|TEXT|1||1
+1|Name|TEXT|0||0
+2|email|TEXT|0||0
+3|Password|TEXT|0||0
+4|Year|INT|0||0
+sqlite>  ALTER TABLE Seniordbs ADD Branch TEXT;
+sqlite>  pragma table_info('Seniordbs');
+0|srid|TEXT|1||1
+1|Name|TEXT|0||0
+2|email|TEXT|0||0
+3|Password|TEXT|0||0
+4|Year|INT|0||0
+5|Branch|TEXT|0||0
+sqlite> ALTER TABLE Juniordbs ADD Branch TEXT;
+sqlite>  pragma table_info('Juniordbs');
+0|jrid|TEXT|1||1
+1|Name|TEXT|0||0
+2|email|TEXT|0||0
+3|Password|TEXT|0||0
+4|Branch|TEXT|0||0
